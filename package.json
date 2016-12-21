@@ -1,0 +1,11 @@
+{
+  "name": "home",
+  "author": {
+    "name": "Ethan Look"
+  },
+  "version": "0.1.0",
+  "dependencies": {
+    "kue": "^0.6.2"
+  },
+  "devDependencies": {}
+}
