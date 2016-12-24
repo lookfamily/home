@@ -35,6 +35,16 @@ let DenonConnection = {
 				else
 					callback({vol: parseInt(vol)});
 			}
+			else if (s.startsWith('MU')) {
+				console.log(s);
+				let mute = s.substr(2);
+				if (mute === 'ON\r')
+					callback({mute: true});
+				else
+					callback({mute: false});
+			}
+			else if (s.startsWith('SI'))
+				callback({source: s.substr(2, s.length - 3)});
 			else
 				console.log('*** Not handled ***:' + data);
 		});

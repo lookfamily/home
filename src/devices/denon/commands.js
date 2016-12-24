@@ -22,7 +22,7 @@ let Denon = {
 	setVolume: function(vol) {
 		var lessThanTen = false;
 		if (Math.floor(vol) !== vol) {
-			lessThanTen = true;
+			lessThanTen = vol < 10;
 			vol *= 10;
 		}
 		if (lessThanTen || vol < 10) vol = '0' + vol.toString();
